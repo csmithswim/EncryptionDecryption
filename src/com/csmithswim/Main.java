@@ -1,29 +1,45 @@
 package com.csmithswim;
 import java.util.Scanner;
-/*For the first stage, you need to manually encrypt the message "we found a treasure!" and print only the ciphertext (in lower case).
-To encrypt the message, replace each letter with the letter that is in the corresponding position from the end of the English alphabet (a→z, b→y, c→x, ... x→c, y →b, z→a). Do not replace spaces or the exclamation mark.
-Use the given template to your program to print the ciphertext instead of the original message.
-The output should look like ## ##### # ########! where # is a lower-case English letter.*/
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        Main.encryptMessage(input);
+        String  message   = scanner.nextLine();
+        int key = scanner.nextInt();
+        Main.encyrptMessage(message, key);
 
     }
 
+    //97 - 122 is a - z
+    //Find how to shift the char int key places when char + key > 122
 
-        public static String encryptMessage(String userInput) {
-            String[] userInputStringArray = userInput.split(" ");
+    public static String encyrptMessage(String userInput, int key) {
+        String[] userInputArray = userInput.split(" ");
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < userInputArray.length; i++) {
+            for (int j = 0; j < userInputArray[i].length(); j++) {
+                if (userInputArray[i].charAt(j) < 97 || userInputArray[i].charAt(j) > 122) {
+                    output.append(userInputArray[i].charAt(j));
+                    continue;
+                }
+                output.append((char)Math.abs((userInputArray[i].charAt(j) - 219)));
+            }
+            output.append(" ");
+        }
+        System.out.println(output);
+        return new String(output);
+
+    }
+    public static String encryptMessage(String userInput) {
+            String[] userInputArray = userInput.split(" ");
             StringBuilder output = new StringBuilder();
-            for (int i = 0; i < userInputStringArray.length; i++) {
-                for (int j = 0; j < userInputStringArray[i].length(); j++) {
-                    if (userInputStringArray[i].charAt(j) < 97 || userInputStringArray[i].charAt(j) > 122) {
-                        output.append(userInputStringArray[i].charAt(j));
+            for (int i = 0; i < userInputArray.length; i++) {
+                for (int j = 0; j < userInputArray[i].length(); j++) {
+                    if (userInputArray[i].charAt(j) < 97 || userInputArray[i].charAt(j) > 122) {
+                        output.append(userInputArray[i].charAt(j));
                         continue;
                     }
-                    char reverseChar = (char)Math.abs((userInputStringArray[i].charAt(j) - 97) - 122);
+                    char reverseChar = (char)Math.abs((userInputArray[i].charAt(j) - 219));
                     output.append(reverseChar);
 
                 }
@@ -31,8 +47,14 @@ public class Main {
             }
             System.out.println(output);
             return new String(output);
-        }
+    }
 }
+
+
+
+
+
+
 
 
 
