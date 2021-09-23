@@ -10,9 +10,6 @@ public class Main {
 
     }
 
-    //97 - 122 is a - z
-    //Find how to shift the char int key places when char + key > 122
-
     public static String encyrptMessage(String userInput, int key) {
         String[] userInputArray = userInput.split(" ");
         StringBuilder output = new StringBuilder();
@@ -22,13 +19,17 @@ public class Main {
                     output.append(userInputArray[i].charAt(j));
                     continue;
                 }
-                output.append((char)Math.abs((userInputArray[i].charAt(j) - 219)));
+                if (userInputArray[i].charAt(j) + key > 122) {
+                    output.append((char)((userInputArray[i].charAt(j) + key - 26)));
+                    continue;
+                } else {
+                output.append((char)(userInputArray[i].charAt(j) + key));
+                }
             }
             output.append(" ");
         }
         System.out.println(output);
         return new String(output);
-
     }
     public static String encryptMessage(String userInput) {
             String[] userInputArray = userInput.split(" ");
