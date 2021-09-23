@@ -4,14 +4,49 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String  message   = scanner.nextLine();
+        String  operation   = scanner.nextLine();
+        String message = scanner.nextLine();
         int key = scanner.nextInt();
-        Main.encyrptMessage(message, key);
 
+        switch (operation) {
+            case "enc":
+                encrypt(message, key);
+                break;
+            case "dec":
+                decrypt(message, key);
+                break;
+            }
+        }
+
+    //decrypts a message based upon a key and includes whitespace and other character's unicode value
+    public static String decrypt(String message, int key) {
+        String[] userInputArray = message.split("");
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < userInputArray.length; i++) {
+            for (int j = 0; j < userInputArray[i].length(); j++) {
+                output.append((char)(userInputArray[i].charAt(j) - key));
+            }
+        }
+        System.out.println(output);
+        return new String(output);
     }
 
-    public static String encyrptMessage(String userInput, int key) {
-        String[] userInputArray = userInput.split(" ");
+    //encrypts a message based upon a key and includes whitespace and other character's unicode value
+    public static String encrypt(String message, int key) {
+        String[] userInputArray = message.split("");
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < userInputArray.length; i++) {
+            for (int j = 0; j < userInputArray[i].length(); j++) {
+                output.append((char)(userInputArray[i].charAt(j) + key));
+            }
+        }
+        System.out.println(output);
+        return new String(output);
+    }
+
+    //caesar cypher, reverses a character by key places in unicode, doesn't pay attention to white space or other characters.
+    public static String caesarEncrypt(String message, int key) {
+        String[] userInputArray = message.split(" ");
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < userInputArray.length; i++) {
             for (int j = 0; j < userInputArray[i].length(); j++) {
@@ -31,8 +66,10 @@ public class Main {
         System.out.println(output);
         return new String(output);
     }
-    public static String encryptMessage(String userInput) {
-            String[] userInputArray = userInput.split(" ");
+
+    //encrypt message to reverse english letters, exclude whitespace and other characters
+    public static String encryptMessage(String message) {
+            String[] userInputArray = message.split(" ");
             StringBuilder output = new StringBuilder();
             for (int i = 0; i < userInputArray.length; i++) {
                 for (int j = 0; j < userInputArray[i].length(); j++) {
