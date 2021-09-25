@@ -3,12 +3,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String  operation   = scanner.nextLine();
-        String message = scanner.nextLine();
-        int key = scanner.nextInt();
 
-        switch (operation) {
+        String mode = "enc";
+        String message = "";
+        int key = 0;
+        for (int i = 0; i < args.length; i++) {
+            if ("-mode".equalsIgnoreCase(args[i])) {
+                mode = args[i + 1];
+            } else if ("-key".equalsIgnoreCase(args[i])) {
+                key = Integer.parseInt(args[i + 1]);
+            } else if ("-data".equalsIgnoreCase(args[i])) {
+                message = args[i + 1];
+            }
+        }
+
+        switch (mode) {
             case "enc":
                 encrypt(message, key);
                 break;
@@ -87,14 +96,6 @@ public class Main {
             return new String(output);
     }
 }
-
-
-
-
-
-
-
-
 
 
 
