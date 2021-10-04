@@ -5,9 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-    EncryptionDecryption encryptionDecryption = new EncryptionDecryption();
+    Program program = new Program();
 
-    encryptionDecryption.processInputs(args);
+    program.processInputs(args);
 
 
 

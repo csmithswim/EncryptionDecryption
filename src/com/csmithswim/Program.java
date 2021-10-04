@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class EncryptionDecryption {
+public class Program {
 
 
     //Method to read command line arguments and store them in fields(constructor?)
@@ -29,7 +29,7 @@ public class EncryptionDecryption {
     private Process process;
 
     //Constructor with default values
-    public EncryptionDecryption() {
+    public Program() {
         message   = "";
         path      = "";
         algorithm = "shift";
