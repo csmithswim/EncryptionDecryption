@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class EncryptionDecryption  {
+public class EncryptionDecryption {
+
 
     //Method to read command line arguments and store them in fields(constructor?)
     //String[] input/args
@@ -19,9 +20,9 @@ public class EncryptionDecryption  {
 
     //Field declarations
     private String  message;
-    private String path;
-    private String algorithm;
-    private String mode;
+    private String  path;
+    private String  algorithm;
+    private String  mode;
     private int     key;
     private boolean print;
 
@@ -29,12 +30,12 @@ public class EncryptionDecryption  {
 
     //Constructor with default values
     public EncryptionDecryption() {
-        message = "";
+        message   = "";
         path      = "";
         algorithm = "shift";
         mode      = "";
-        key     = 0;
-        print   = true;
+        key       = 0;
+        print     = true;
     }
 
     public void setProcess(Process process) {
@@ -82,6 +83,8 @@ public class EncryptionDecryption  {
         }
     }
 }
+
+
 
 
 
