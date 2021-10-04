@@ -4,10 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Shift {
+ public abstract class Shift implements Process {
 
-
-    public static void caesarDecrypt(String message, int key, boolean print, String path) {
+    public static void decrypt(String message, int key, boolean print, String path) {
         String[] userInputArray = message.split(" ");
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < userInputArray.length; i++) {
@@ -20,9 +19,6 @@ public class Shift {
                         continue;
                     }
                 }
-                //A - Z 65 - 90
-                //a - z 97 - 122
-                //for lowercase letter circles
                 else if (userInputArray[i].charAt(j) - key < 97) {
                     output.append((char)((userInputArray[i].charAt(j) - key + 26)));
                     continue;
@@ -31,7 +27,6 @@ public class Shift {
                     output.append((char)((userInputArray[i].charAt(j) - key + 26)));
                     continue;
                 }
-                //all other cases to shift letters
                 else {
                     output.append((char)(userInputArray[i].charAt(j) - key));
                 }
@@ -50,8 +45,7 @@ public class Shift {
         }
     }
 
-    //caesar cypher, reverses a character by key places in unicode, doesn't pay attention to white space or other characters.
-    public static void caesarEncrypt(String message, int key, boolean print, String path) {
+    public static void encrypt(String message, int key, boolean print, String path) {
         String[] userInputArray = message.split(" ");
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < userInputArray.length; i++) {
@@ -63,16 +57,13 @@ public class Shift {
                         continue;
                     }
                 }
-                //for lowercase letters circle
                 else if (userInputArray[i].charAt(j) + key > 122) {
                     output.append((char)((userInputArray[i].charAt(j) + key - 26)));
                     continue;
-                    //for uppercase letters circle
                 } else if (userInputArray[i].charAt(j) < 97 && userInputArray[i].charAt(j) + key > 90) {
                     output.append((char)((userInputArray[i].charAt(j) + key - 26)));
                     continue;
                 }
-                //all other cases to shift letters
                 else {
                     output.append((char)(userInputArray[i].charAt(j) + key));
                 }
@@ -90,25 +81,4 @@ public class Shift {
             }
         }
     }
-
-    //encrypt message to reverse english letters, exclude whitespace and other characters
-
-//    public static String encryptMessage(String message) {
-//        String[] userInputArray = message.split(" ");
-//        StringBuilder output = new StringBuilder();
-//        for (int i = 0; i < userInputArray.length; i++) {
-//            for (int j = 0; j < userInputArray[i].length(); j++) {
-//                if (userInputArray[i].charAt(j) < 97 || userInputArray[i].charAt(j) > 122) {
-//                    output.append(userInputArray[i].charAt(j));
-//                    continue;
-//                }
-//                char reverseChar = (char)Math.abs((userInputArray[i].charAt(j) - 219));
-//                output.append(reverseChar);
-//
-//            }
-//            output.append(" ");
-//        }
-//        System.out.println(output);
-//        return new String(output);
-//    }
 }

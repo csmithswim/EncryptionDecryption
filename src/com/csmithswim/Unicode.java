@@ -4,10 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Unicode {
+public abstract class Unicode implements Process {
 
-    //decrypts a message based upon a key and includes whitespace and other character's unicode value
-    public static void dec(String message, int key, boolean print, String path) {
+    public static void decrypt(String message, int key, boolean print, String path) {
         String[] userInputArray = message.split("");
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < userInputArray.length; i++) {
@@ -27,8 +26,7 @@ public class Unicode {
         }
     }
 
-    //encrypts a message based upon a key and includes whitespace and other character's unicode value
-    public static void enc(String message, int key, boolean print, String path) {
+    public static void encrypt(String message, int key, boolean print, String path) {
         String[] userInputArray = message.split("");
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < userInputArray.length; i++) {
