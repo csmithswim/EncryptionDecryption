@@ -13,7 +13,7 @@ public class Program {
     //Params begin with -
     //Arguments are params + 1
 
-    //java Main -mode enc -key 5 -data "Welcome to hyperskill!" -alg unicode
+//    java Main -mode enc -key 5 -data "Welcome to hyperskill!" -alg unicode
 
     //Two different subclasses and their overridden methods to encrypt or decrypt Args
     //java Main -mode enc -in road_to_treasure.txt -out protected.txt -key 5 -alg unicode
