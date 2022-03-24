@@ -1,6 +1,5 @@
 **EncryptionDecryption**
-
-A Java application that encrypts and decrypts text messages.
+\nA Java application that encrypts and decrypts text messages.
 
 This Java application can encrypt or decrypt a message taken from standard input, command line arguments or a text file. The output of the application can a standard output or 
 saved as a new text file to local storage. There are two specific encryption and decryption methods in the application: shift and unicode. The shift method encrypts or decrypts 
