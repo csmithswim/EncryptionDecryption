@@ -6,19 +6,6 @@ import java.util.Scanner;
 
 public class Program {
 
-
-    //Method to read command line arguments and store them in fields(constructor?)
-    //String[] input/args
-    //Iterate through whole array
-    //Params begin with -
-    //Arguments are params + 1
-
-//    java Main -mode enc -key 5 -data "Welcome to hyperskill!" -alg unicode
-
-    //Two different subclasses and their overridden methods to encrypt or decrypt Args
-    //java Main -mode enc -in road_to_treasure.txt -out protected.txt -key 5 -alg unicode
-
-    //Field declarations
     private String  message;
     private String  path;
     private String  algorithm;
@@ -28,7 +15,7 @@ public class Program {
 
     private Process process;
 
-    //Constructor with default values
+    //Default constructor
     public Program() {
         message   = "";
         path      = "";

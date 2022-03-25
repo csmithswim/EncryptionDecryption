@@ -1,29 +1,42 @@
-**EncryptionDecryption**
-\nA Java application that encrypts and decrypts text messages.
+##Encryption Decryption
+A Java application that encrypts and decrypts text messages.
 
-This Java application can encrypt or decrypt a message taken from standard input, command line arguments or a text file. The output of the application can a standard output or 
-saved as a new text file to local storage. There are two specific encryption and decryption methods in the application: shift and unicode. The shift method encrypts or decrypts 
-each 
-character of the 
-message to its corresponding character in the English alphabet and does not pay attention to special characters or white space. The unicode method encrypts or decrypts each 
-character of the message according to its number on the unicode table. The two methods work like so:
+-------------
 
-**The Shift Method**
-_To Encrypt_
+####Features
+* Encrypts and decrypts messages using two different algorithms.
+* Messages can be passed through standard input, command line arguments or a text file.
+* Output can be displayed with standard output or saved to a txt file on local storage.
+* The shift algorithm changes each character of the message to its corresponding character in the English alphabet and excludes special characters and white space.
+* The unicode algorithm method encrypts or decrypts each
+  character of the message according to its number on the unicode table.
+-------------
+###Shift Algorithm
+####To Encrypt
 Original message: For king and country!
+
 Encrypted message: Ktw pnsl fsi htzsywd!
-_To Decrypt_
+####To Decrypt
 Original message: Uqjfxj xjsi mjqu!
+
 Decrypted message: Please send help!
 
-**The Unicode Method**
-_To Encrypt_
+###Unicode Algorithm
+####To Encrypt
 Original message:  All your base belongs to us!
+
 Encrypted message: Fqq%~tzw%gfxj%gjqtslx%yt%zx&
 
-_To Decrypt_
+####To Decrypt
 Original message: Yfpj%~tzw%knwxy%qjky%ymjs%wnlmy3
+
 Decrypted message: Take your first left then right.
+
+-------------
+
+
+###App In Process
+
 
 
 

@@ -3,16 +3,15 @@ package com.csmithswim;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
- public abstract class Shift implements Process {
+public abstract class Shift implements Process {
 
     public static void decrypt(String message, int key, boolean print, String path) {
         String[] userInputArray = message.split(" ");
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < userInputArray.length; i++) {
             for (int j = 0; j < userInputArray[i].length(); j++) {
-
-
                 if (userInputArray[i].charAt(j) < 65 || userInputArray[i].charAt(j) > 122) {
                     if (userInputArray[i].charAt(j) > 90 || userInputArray[i].charAt(j) < 97) {
                         output.append((char)(userInputArray[i].charAt(j)));
@@ -22,7 +21,7 @@ import java.io.IOException;
                 else if (userInputArray[i].charAt(j) - key < 97) {
                     output.append((char)((userInputArray[i].charAt(j) - key + 26)));
                     continue;
-                    //for uppercase letters circle
+                    //Uppercase letter conversion
                 } else if (userInputArray[i].charAt(j) - key < 65) {
                     output.append((char)((userInputArray[i].charAt(j) - key + 26)));
                     continue;
