@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public abstract class Unicode implements Process {
+public abstract class Unicode {
 
     public static void decrypt(String message, int key, boolean print, String path) {
         String[] userInputArray = message.split("");

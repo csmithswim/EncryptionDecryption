@@ -25,10 +25,6 @@ public class Program {
         print     = true;
     }
 
-    public void setProcess(Process process) {
-        this.process = process;
-    }
-
     public void processInputs(String[] input) {
         for (int i = 0; i < input.length; i++) {
             if ("-alg".equalsIgnoreCase(input[i])) {

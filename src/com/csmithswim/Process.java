@@ -4,5 +4,4 @@ public interface Process {
 
     void isUnicode();
     void decrypt();
-
 }
