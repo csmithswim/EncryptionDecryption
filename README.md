@@ -40,6 +40,8 @@ Decrypted message: Take your first left then right.
 
 
 
+
+
 I choose to make this project to further solidify my knowledge of Java and learn more about command line arguments, Java's file 
 package and cryptography. The main challenges I faced while developing this application was accounting for English letters being converted to the corresponding letter in the 
 alphabet, e.g. a - z or Y - B. I hope to incorporate other encryption and decryption methods into this application to learn more about cryptography in the future. Below are 
