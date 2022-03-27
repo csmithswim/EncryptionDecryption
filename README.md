@@ -1,9 +1,9 @@
-##Encryption Decryption##
+## Encryption Decryption ##
 A Java application that encrypts and decrypts text messages.
 
 -------------
 
-####Features####
+#### Features ####
 * Encrypts and decrypts messages using two different algorithms.
 * Messages can be passed through standard input, command line arguments or a text file.
 * Output can be displayed with standard output or saved to a txt file on local storage.
