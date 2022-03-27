@@ -6,6 +6,7 @@ public class Main {
     //"Welcome to hyperskill!"
     //java Main -key 5 -alg shift -data "Bjqhtrj yt mdujwxpnqq!" -mode dec
 
+
     public static void main(String[] args) {
     Program program = new Program();
     program.processInputs(args);
