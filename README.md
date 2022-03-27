@@ -53,7 +53,9 @@ Decrypted message: Take your first left then right.
   -out then the program will print the message to standard output.
 * Any non-standard situation, such as a file not existing or an argument missing a value, will cause the program to display a clear message about the error.
 
+#### Standard Input
 
+![standard input](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/standard%20input%20screenshot.png)
 
 
 
