@@ -41,7 +41,6 @@ import java.util.Arrays;
                         output.append((char)(userInputArray[i].charAt(j) - shift + 26));
                     }
                     else {
-                        System.out.println(((char)(userInputArray[i].charAt(j) - shift)));
                         output.append((char)(userInputArray[i].charAt(j) - shift));
                     }
                 }

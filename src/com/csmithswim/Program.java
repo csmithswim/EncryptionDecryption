@@ -25,6 +25,13 @@ public class Program {
         print     = true;
     }
 
+    public String[] standardInput() {
+        System.out.print("Enter String[] Arguments:");
+        Scanner scanner = new Scanner(System.in);
+        String[] rawInputArray = scanner.nextLine().split("\\s(?=(?:[^'\"`]*(['\"`])[^'\"`]*\\1)*[^'\"`]*$)");
+        return rawInputArray;
+    }
+
     public void processInputs(String[] input) {
         for (int i = 0; i < input.length; i++) {
             if ("-alg".equalsIgnoreCase(input[i])) {
