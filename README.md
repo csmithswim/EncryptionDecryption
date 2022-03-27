@@ -11,23 +11,23 @@ A Java application that encrypts and decrypts text messages.
 * The unicode algorithm method encrypts or decrypts each
   character of the message according to its number on the unicode table.
 -------------
-###Shift Algorithm###
-####To Encrypt####
+### Shift Algorithm ###
+#### To Encrypt ####
 Original message: For king and country!
 
 Encrypted message: Ktw pnsl fsi htzsywd!
-####To Decrypt####
+#### To Decrypt ####
 Original message: Uqjfxj xjsi mjqu!
 
 Decrypted message: Please send help!
 
-###Unicode Algorithm###
-####To Encrypt####
+### Unicode Algorithm ###
+#### To Encrypt ####
 Original message:  All your base belongs to us!
 
 Encrypted message: Fqq%~tzw%gfxj%gjqtslx%yt%zx&
 
-####To Decrypt####
+#### To Decrypt ####
 Original message: Yfpj%~tzw%knwxy%qjky%ymjs%wnlmy3
 
 Decrypted message: Take your first left then right.
@@ -35,7 +35,7 @@ Decrypted message: Take your first left then right.
 -------------
 
 
-###App In Process###
+### App In Process ###
 
 ![grab-landing-page](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/dana.gif)
 
