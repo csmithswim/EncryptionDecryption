@@ -37,7 +37,7 @@ Decrypted message: Take your first left then right.
 ### How The Application Works ###
 
 * Messages can be  encrypted or decrypted using the Caesar algorithm or the Unicode algorithm via standard input or command line arguments.
-* The messages can be read directly from standard input/command line or read from a .txt file.
+* The messages can be read directly from standard input/command line or read from a .txt file. 
 * To run the application on the command line or standard input use this specific syntax with the arguments. There must be spaces between the different arguments and the 
   message must be within double quotes.
 
@@ -51,11 +51,17 @@ Decrypted message: Take your first left then right.
   empty string. If there are both -data and -in arguments than the program will choose -data over -in.
 * -out {insert_txt_name_here.txt} will save a new txt file with the encrypted or decrypted method to the root directory of the application. If there is no argument supplied to 
   -out then the program will print the message to standard output.
+* -alg shift indicates that the algorithm used to encrypt/decrypt is the Caesar shift algorithm that only changes english letters while -alg unicode will shift all characters 
+  in the message. If there is no argument supplied after -alg then the default is shift.
 * Any non-standard situation, such as a file not existing or an argument missing a value, will cause the program to display a clear message about the error.
 
-#### Standard Input
+### Standard Input
 
 ![standard input](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/standard%20input%20screenshot.png)
+
+### Command Line Arguments
+
+#### -data Messages
 
 
 
