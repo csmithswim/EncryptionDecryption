@@ -81,5 +81,10 @@ Decrypted message: Take your first left then right.
 
 I choose to make this project to further solidify my knowledge of Java and learn more about command line arguments, Java's file 
 package and cryptography. The main challenges I faced while developing this application was english letters being shifted forward or backward in relation to their position to 
-their ascii value. It was a rewarding challenge, and I hope to implement new functionality to the unicode algorithm to account for any integer passed for the key in the future. 
-I hope to incorporate other encryption and decryption methods into this application to learn more about cryptography in the future. All code was written by Cullen Smith.
+their ascii value. 
+
+It was a rewarding challenge, and I hope to implement new functionality to the unicode algorithm to account for any integer passed for the key in the future. 
+I hope to incorporate other encryption and decryption methods into this application to learn more about cryptography in the future. All code was written by cSmithSwim.
+
+Note: To run this application one needs to clone this repo or the individual classes can be downloaded, compiled and then ran on the command line. This README assumes a user is 
+familiar with how to compile and run simple Java application and this application served as an education exercise for myself. 
