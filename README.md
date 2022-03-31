@@ -63,6 +63,18 @@ Decrypted message: Take your first left then right.
 
 #### The Caesar (Shift) Algorithm 
 
+![shift_alg_encrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%201.gif)
+
+![shift_alg_decrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%202.gif)
+
+
+### Reading and Writing Encrypted/Decrypted .txt Files
+
+![unicode_alg_encrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%203.gif)
+
+![unicode_alg_decrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%204.gif)
+
+
 
 
 I choose to make this project to further solidify my knowledge of Java and learn more about command line arguments, Java's file 
