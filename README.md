@@ -61,9 +61,11 @@ Decrypted message: Take your first left then right.
 
 ### Command Line Arguments
 
-#### The Caesar (Shift) Algorithm 
+#### The Caesar (Shift) Algorithm
 
 ![shift_alg_encrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%201.gif)
+
+#### The Unicode Algorithm
 
 ![shift_alg_decrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%202.gif)
 
@@ -75,9 +77,9 @@ Decrypted message: Take your first left then right.
 ![unicode_alg_decrypt](https://github.com/csmithswim/EncryptionDecryption/blob/main/images/command%20line%20argument%204.gif)
 
 
-
+### Final Thoughts
 
 I choose to make this project to further solidify my knowledge of Java and learn more about command line arguments, Java's file 
-package and cryptography. The main challenges I faced while developing this application was accounting for English letters being converted to the corresponding letter in the 
-alphabet, e.g. a - z or Y - B. I hope to incorporate other encryption and decryption methods into this application to learn more about cryptography in the future. Below are 
-GIF's showing the application being run.
+package and cryptography. The main challenges I faced while developing this application was english letters being shifted forward or backward in relation to their position to 
+their ascii value. It was a rewarding challenge, and I hope to implement new functionality to the unicode algorithm to account for any integer passed for the key in the future. 
+I hope to incorporate other encryption and decryption methods into this application to learn more about cryptography in the future. All code was written by Cullen Smith.
